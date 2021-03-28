@@ -1,6 +1,7 @@
 package streams;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -29,5 +30,15 @@ public class Grouping {
 		for (Map.Entry<String,List<Employee>> entry : myMap.entrySet())
 			System.out.println(entry.getKey()+" are "+entry.getValue().size());
 		
+		employeeList.stream().map(e-> e.age).filter(new A()::isFalse);
+		
+	}
+}
+class A 
+{
+
+	public boolean isFalse(Integer o) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
