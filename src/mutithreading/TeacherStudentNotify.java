@@ -35,7 +35,7 @@ class Student extends Thread{
 				notify();
 				System.out.println(" I am notifed by my teacher");
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
+				
 				
 				e.printStackTrace();
 			}

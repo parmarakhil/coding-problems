@@ -31,14 +31,17 @@ public class Grouping {
 			System.out.println(entry.getKey()+" are "+entry.getValue().size());
 		
 		employeeList.stream().map(e-> e.age).filter(new A()::isFalse);
-		
+		List<Employee> sortedList=employeeList.stream().sorted((ele1,ele2) -> ele1.getAge()-ele2.getAge()).collect(Collectors.toList());
+		for(Employee e:sortedList) {
+			System.out.println(e.getAge());
+		}
 	}
 }
 class A 
 {
 
 	public boolean isFalse(Integer o) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 }
